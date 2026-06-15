@@ -1,0 +1,6 @@
+{
+  "name": "Web3 Hero Landing",
+  "description": "A sleek Web3 hero landing page with futuristic cyberpunk graphics and interactive blockchain experiences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
