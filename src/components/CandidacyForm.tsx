@@ -11,6 +11,7 @@ import {
   Loader2, 
   ShieldAlert 
 } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 interface CandidacyFormProps {
   onClose: () => void;
@@ -76,14 +77,38 @@ const CandidacyForm: React.FC<CandidacyFormProps> = ({ onClose }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setStatus('loading');
-    setTimeout(() => {
+    
+    try {
+      const { error } = await supabase
+        .from('candidacies')
+        .insert([
+          {
+            full_name: formData.fullName,
+            game_pseudo: formData.gamePseudo,
+            whatsapp: formData.whatsapp,
+            country: formData.country,
+            language: formData.language
+          }
+        ]);
+
+      if (error) {
+        console.error('Supabase error:', error);
+        throw error;
+      }
+      
       setStatus('success');
-    }, 1800);
+    } catch (err: any) {
+      console.error('Error submitting candidacy:', err);
+      setStatus('idle');
+      
+      const errorMessage = err?.message || err?.details || "Erreur inconnue";
+      alert(`Erreur d'envoi à Supabase :\n${errorMessage}\n\nSi l'erreur dit que 'language' est introuvable, c'est que le cache n'a pas encore été mis à jour par Supabase. Ressaie !`);
+    }
   };
 
   if (status === 'success') {
