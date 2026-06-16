@@ -1,20 +1,48 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# W入~RLORD — Site Officiel du Clan
 
-# Run and deploy your AI Studio app
+Site officiel du clan **W入~RLORD** sur Call of Duty Mobile.  
+Une landing page moderne et immersive présentant le clan, ses membres et son système de recrutement.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/28f3d5b4-2eb7-42ff-ad87-f9e9b8c077b4
+## ⚔️ Fonctionnalités
 
-## Run Locally
+- **Page d'accueil** avec vidéo de fond cinématique
+- **Découverte du clan** : présentation de la structure T1 / T2
+- **Roster complet** : fiches joueurs avec stats (K/D, rôle, arme favorite)
+- **Panthéon** : figures emblématiques du clan
+- **Formulaire de candidature** pour rejoindre le clan
 
-**Prerequisites:**  Node.js
+---
 
+## 🚀 Lancer le projet en local
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**Prérequis :** Node.js
+
+```bash
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
+npm run dev
+```
+
+L'application sera disponible sur `http://localhost:5173`
+
+---
+
+## 🛠️ Stack technique
+
+- **React** + **TypeScript**
+- **Vite**
+- **Framer Motion** (animations)
+- **Lucide React** (icônes)
+- **TailwindCSS**
+
+---
+
+## 🏆 Clan W入~RLORD
+
+> *"La discipline forge les légendes."*
+
+Clan compétitif Call of Duty Mobile — Fondé et dirigé par **@W入~Undertaker**.

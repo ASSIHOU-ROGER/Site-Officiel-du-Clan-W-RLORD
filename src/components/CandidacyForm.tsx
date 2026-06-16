@@ -124,7 +124,7 @@ const CandidacyForm: React.FC<CandidacyFormProps> = ({ onClose }) => {
           </p>
           
           <motion.a
-            href="https://discord.gg/warlord-waiting-room"
+            href="https://chat.whatsapp.com/EznaTVLR8Qt5GjYkkC4JIS"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03, boxShadow: '0 0 30px rgba(6,182,212,0.4)' }}
