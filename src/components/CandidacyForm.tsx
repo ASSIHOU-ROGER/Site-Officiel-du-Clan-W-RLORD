@@ -11,7 +11,6 @@ import {
   Loader2, 
   ShieldAlert 
 } from 'lucide-react';
-import { supabase } from '../lib/supabase';
 
 interface CandidacyFormProps {
   onClose: () => void;
@@ -77,36 +76,14 @@ const CandidacyForm: React.FC<CandidacyFormProps> = ({ onClose }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setStatus('loading');
-    
-    try {
-      const { error } = await supabase
-        .from('candidacies')
-        .insert([
-          {
-            full_name: formData.fullName,
-            game_pseudo: formData.gamePseudo,
-            whatsapp: formData.whatsapp,
-            country: formData.country,
-            language: formData.language
-          }
-        ]);
-
-      if (error) {
-        console.error('Supabase error:', error);
-        throw error;
-      }
-      
+    setTimeout(() => {
       setStatus('success');
-    } catch (err) {
-      console.error('Error submitting candidacy:', err);
-      setStatus('idle');
-      alert("Une erreur de transmission s'est produite. Veuillez réessayer.");
-    }
+    }, 1800);
   };
 
   if (status === 'success') {
