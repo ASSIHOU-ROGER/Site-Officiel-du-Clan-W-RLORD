@@ -57,11 +57,11 @@ const WarriorsDetails: React.FC<WarriorsDetailsProps> = ({ onClose }) => {
     { name: '@W入~Cus_Hunt3r', fullName: 'ASSOGBA Marcus', role: 'Anchor / Slayeur', country: 'Bénin', flag: '🇧🇯', motto: 'Maitrise du champ de bataille et du rythme des combats.', kd: '1.95', favWeapon: 'VMP', featured: false },
     { name: '@W入~Prudoh', fullName: 'HOUEDENOU Prudence', role: 'Flex / Polyvalent', country: 'Bénin', flag: '🇧🇯', motto: 'Polyvalent, il répond à tous les scénarios de match.', kd: '1.90', favWeapon: 'Aucune préférence', featured: false },
     { name: '@W入~BRAD', fullName: 'AZAÏNON Bradley', role: 'Sniper d\'Élite', country: 'Sénégal', flag: '🇸🇳', motto: 'Un tir, une élimination. Gardien des longues lignes.', kd: '2.10', favWeapon: 'LAG 53', featured: false },
-    { name: '@W入~WAD', fullName: 'WAIDI Abdoul Wadoud', role: 'Anchor / Support', country: 'Nigéria', flag: '🇳🇬', motto: 'Verrouille les zones et sécurise les spawns tactiques.', kd: '1.75', favWeapon: 'VMP Éclosion Toxique', featured: false },
+    { name: '@W入~WAD', fullName: 'WAIDI Abdoul Wadoud', role: 'Anchor / Support', country: 'Nigéria', flag: '🇳🇬', motto: 'Verrouille les zones et sécurise les spawns tactiques.', kd: '2.65', favWeapon: 'VMP Éclosion Toxique', featured: false },
     { name: '@W入~MK_USER', fullName: 'KANGNIDE Morel', role: 'Flex / Rusher', country: 'Bénin', flag: '🇧🇯', motto: 'S\'adapte instantanément aux besoins de l\'escouade.', kd: '1.90', favWeapon: 'PP Bizon', featured: false },
-    { name: '@W入~YAZ', fullName: 'YAROU Yazid', role: 'In-Game Leader (IGL)', country: 'Bénin', flag: '🇧🇯', motto: 'Le cerveau tactique du clan, maître des rotations.', kd: '1.85', favWeapon: 'QQ9', featured: false },
+    { name: '@W入~YAZ', fullName: 'YAROU Yazid', role: 'In-Game Leader (IGL)', country: 'Bénin', flag: '🇧🇯', motto: 'Le cerveau tactique du clan, maître des rotations.', kd: '2.98', favWeapon: 'QQ9', featured: false },
     { name: '@W入~BaKs女', fullName: 'BONOU Abraham', role: 'Sniper de Soutien', country: 'Bénin', flag: '🇧🇯', motto: 'Sécurise les zones ouvertes à longue distance.', kd: '1.60', favWeapon: 'Locus', featured: false },
-    { name: '@W入~EML76', fullName: 'GANHE EMILIO', role: 'Slayer', country: 'Béninois / Américain', flag: '🇧🇯', motto: 'Cherche le duel pour briser la défense adverse.', kd: '1.62', favWeapon: 'Chopper', featured: false },
+    { name: '@W入~EML76', fullName: 'GANHE EMILIO', role: 'Slayer', country: 'Béninois / Américain', flag: '🇧🇯', motto: 'Cherche le duel pour briser la défense adverse.', kd: '2.76', favWeapon: 'Chopper', featured: false },
     { name: '@W入~PARKER0755', fullName: 'ASSIHOU Freddy', role: 'Rusher Élite / Flanker', country: 'Bénin', flag: '🇧🇯', motto: 'Inarrêtable. Brise chaque ligne de défense avant que l\'ennemi réalise.', kd: '2.47', favWeapon: 'USS9 / VMP Éclosion Toxique', winRate: '79%', killStreak: '32', clanLeader: true, featured: true }
   ];
 
