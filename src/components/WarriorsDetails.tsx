@@ -53,25 +53,25 @@ const WarriorsDetails: React.FC<WarriorsDetailsProps> = ({ onClose }) => {
 
   const t1Players: Player[] = [
     { name: '@W入~Undertaker', fullName: 'MYEHOUENOU DILANE', role: 'Chef de Clan / Slayer', country: 'Bénin', flag: '🇧🇯', motto: 'Fondateur et faucheuse des arènes. La loi du clan, c\'est lui.', kd: '2.45', favWeapon: 'Cran d\'arrêt ou Switchblade', clanLeader: true, featured: false },
-    { name: '@W入~Rous_1223', fullName: 'GBEDAN Armand', role: 'Support / Rusher', country: 'Bénin', flag: '🇧🇯', motto: 'Tactique et précision, toujours prêt à soutenir la ligne.', kd: '1.85', favWeapon: 'Cran d\'arrêt', featured: false },
-    { name: '@W入~Cus_Hunt3r', fullName: 'ASSOGBA Marcus', role: 'Anchor / Slayeur', country: 'Bénin', flag: '🇧🇯', motto: 'Maitrise du champ de bataille et du rythme des combats.', kd: '1.95', favWeapon: 'VMP', featured: false },
-    { name: '@W入~Prudoh', fullName: 'HOUEDENOU Prudence', role: 'Flex / Polyvalent', country: 'Bénin', flag: '🇧🇯', motto: 'Polyvalent, il répond à tous les scénarios de match.', kd: '1.90', favWeapon: 'Aucune préférence', featured: false },
     { name: '@W入~BRAD', fullName: 'AZAÏNON Bradley', role: 'Sniper d\'Élite', country: 'Sénégal', flag: '🇸🇳', motto: 'Un tir, une élimination. Gardien des longues lignes.', kd: '2.10', favWeapon: 'LAG 53', featured: false },
-    { name: '@W入~WAD', fullName: 'WAIDI Abdoul Wadoud', role: 'Anchor / Support', country: 'Nigéria', flag: '🇳🇬', motto: 'Verrouille les zones et sécurise les spawns tactiques.', kd: '2.65', favWeapon: 'VMP Éclosion Toxique', featured: false },
     { name: '@W入~YAZ', fullName: 'YAROU Yazid', role: 'In-Game Leader (IGL)', country: 'Bénin', flag: '🇧🇯', motto: 'Le cerveau tactique du clan, maître des rotations.', kd: '2.98', favWeapon: 'QQ9', featured: false },
-    { name: '@W入~BaKs女', fullName: 'BONOU Abraham', role: 'Sniper de Soutien', country: 'Bénin', flag: '🇧🇯', motto: 'Sécurise les zones ouvertes à longue distance.', kd: '1.60', favWeapon: 'Locus', featured: false },
-    { name: '@W入~PARKER0755', fullName: 'ASSIHOU Freddy', role: 'Rusher Élite / Flanker', country: 'Bénin', flag: '🇧🇯', motto: 'Inarrêtable. Brise chaque ligne de défense avant que l\'ennemi réalise.', kd: '2.91', favWeapon: 'USS9 / VMP Éclosion Toxique', winRate: '79%', killStreak: '32', clanLeader: true, featured: true }
+    { name: '@W入~PARKER0755', fullName: 'ASSIHOU Freddy', role: 'Rusher Élite / Flanker', country: 'Bénin', flag: '🇧🇯', motto: 'Inarrêtable. Brise chaque ligne de défense avant que l\'ennemi réalise.', kd: '2.91', favWeapon: 'USS9 / VMP Éclosion Toxique', winRate: '79%', killStreak: '32', clanLeader: true, featured: true },
+    { name: '@W入~WAD', fullName: 'WAIDI Abdoul Wadoud', role: 'Anchor / Support', country: 'Nigéria', flag: '🇳🇬', motto: 'Verrouille les zones et sécurise les spawns tactiques.', kd: '2.65', favWeapon: 'VMP Éclosion Toxique', featured: false },
+    { name: '@W入~JAY', role: 'Support / Utility', country: 'Sénégal', flag: '🇸🇳', motto: 'Assure la couverture et la pose de trophées.', kd: '1.65', favWeapon: 'Grau 5.56', featured: false },
+    { name: '@W入~Prudoh', fullName: 'HOUEDENOU Prudence', role: 'Flex / Polyvalent', country: 'Bénin', flag: '🇧🇯', motto: 'Polyvalent, il répond à tous les scénarios de match.', kd: '1.90', favWeapon: 'Aucune préférence', featured: false },
+    { name: '@W入~DAN', role: 'Rusher Agressif', country: 'France', flag: '🇫🇷', motto: 'Premier sur le point chaud, ne recule jamais.', kd: '2.05', favWeapon: 'Kilo 141', featured: false }
   ];
 
   const t2Players = [
-    { name: '@W入~Roussel', role: 'Support', country: 'Côte d\'Ivoire', flag: '🇨🇮', motto: 'Assure la liaison tactique et la couverture.', kd: '1.52', favWeapon: 'Grau 5.56' },
+    { name: '@W入~Rous_1223', fullName: 'GBEDAN Armand', role: 'Support', country: 'Bénin', flag: '🇧🇯', motto: 'Tactique et précision, toujours prêt à soutenir la ligne.', kd: '1.85', favWeapon: 'Cran d\'arrêt' },
     { name: '@W入~Valdophe', role: 'Rusher', country: 'Cameroun', flag: '🇨🇲', motto: 'Agressivité constante sur les lignes latérales.', kd: '1.58', favWeapon: 'Fennec' },
     { name: '@W入~EML', role: 'Slayer', country: 'Togo', flag: '🇹🇬', motto: 'Cherche le duel pour briser la défense adverse.', kd: '1.62', favWeapon: 'DR-H' },
     { name: '@W入~Sage', role: 'IGL Adjoint', country: 'France', flag: '🇫🇷', motto: 'Organise les replacements en Recherche & Destruction.', kd: '1.45', favWeapon: 'LK24' },
+    { name: '@W入~BaKs女', fullName: 'BONOU Abraham', role: 'Sniper de Soutien', country: 'Bénin', flag: '🇧🇯', motto: 'Sécurise les zones ouvertes à longue distance.', kd: '1.60', favWeapon: 'Locus' },
     { name: '@W入~Kings', role: 'Rusher', country: 'Bénin', flag: '🇧🇯', motto: 'Pression constante sur les arrières de l\'ennemi.', kd: '1.48', favWeapon: 'Switchblade X9' },
     { name: '@W入~Coloss19', role: 'Sniper de Soutien', country: 'France', flag: '🇫🇷', motto: 'Sécurise les zones ouvertes à longue distance.', kd: '1.60', favWeapon: 'Locus' },
     { name: '@W入~Cus_hunter', role: 'Anchor', country: 'Sénégal', flag: '🇸🇳', motto: 'Maintient la position d\'ancrage arrière.', kd: '1.38', favWeapon: 'HVK-30' },
-    { name: '@W入~MK_USER', role: 'Flex', country: 'Cameroun', flag: '🇨🇲', motto: 'S\'adapte aux besoins selon la carte jouée.', kd: '1.40', favWeapon: 'Kilo 141' }
+    { name: '@W入~MK_USER', fullName: 'KANGNIDE Morel', role: 'Flex', country: 'Bénin', flag: '🇧🇯', motto: 'S\'adapte aux besoins selon la carte jouée.', kd: '1.40', favWeapon: 'PP Bizon' }
   ];
 
   const currentRoster = activeTab === 'T1' ? t1Players : t2Players;
