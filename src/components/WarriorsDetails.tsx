@@ -62,7 +62,7 @@ const WarriorsDetails: React.FC<WarriorsDetailsProps> = ({ onClose }) => {
     { name: '@W入~YAZ', fullName: 'YAROU Yazid', role: 'In-Game Leader (IGL)', country: 'Bénin', flag: '🇧🇯', motto: 'Le cerveau tactique du clan, maître des rotations.', kd: '2.98', favWeapon: 'QQ9', featured: false },
     { name: '@W入~BaKs女', fullName: 'BONOU Abraham', role: 'Sniper de Soutien', country: 'Bénin', flag: '🇧🇯', motto: 'Sécurise les zones ouvertes à longue distance.', kd: '1.60', favWeapon: 'Locus', featured: false },
     { name: '@W入~EML76', fullName: 'GANHE EMILIO', role: 'Slayer', country: 'Béninois / Américain', flag: '🇧🇯', motto: 'Cherche le duel pour briser la défense adverse.', kd: '2.76', favWeapon: 'Chopper', featured: false },
-    { name: '@W入~PARKER0755', fullName: 'ASSIHOU Freddy', role: 'Rusher Élite / Flanker', country: 'Bénin', flag: '🇧🇯', motto: 'Inarrêtable. Brise chaque ligne de défense avant que l\'ennemi réalise.', kd: '2.47', favWeapon: 'USS9 / VMP Éclosion Toxique', winRate: '79%', killStreak: '32', clanLeader: true, featured: true }
+    { name: '@W入~PARKER0755', fullName: 'ASSIHOU Freddy', role: 'Rusher Élite / Flanker', country: 'Bénin', flag: '🇧🇯', motto: 'Inarrêtable. Brise chaque ligne de défense avant que l\'ennemi réalise.', kd: '2.91', favWeapon: 'USS9 / VMP Éclosion Toxique', winRate: '79%', killStreak: '32', clanLeader: true, featured: true }
   ];
 
   const t2Players = [
