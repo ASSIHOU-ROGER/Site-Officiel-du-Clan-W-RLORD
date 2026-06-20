@@ -14,6 +14,21 @@ interface WarriorsDetailsProps {
   onClose: () => void;
 }
 
+interface Player {
+  name: string;
+  fullName?: string;
+  role: string;
+  country: string;
+  flag: string;
+  motto: string;
+  kd: string;
+  favWeapon: string;
+  clanLeader?: boolean;
+  featured?: boolean;
+  winRate?: string;
+  killStreak?: string;
+}
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -36,15 +51,18 @@ const cardVariants = {
 const WarriorsDetails: React.FC<WarriorsDetailsProps> = ({ onClose }) => {
   const [activeTab, setActiveTab] = useState<'T1' | 'T2'>('T1');
 
-  const t1Players = [
-    { name: '@W入~Undertaker', role: 'Chef de Clan / Slayer', country: 'France', flag: '🇫🇷', motto: 'Fondateur et faucheuse des arènes. La loi du clan, c\'est lui.', kd: '2.45', favWeapon: 'Fennec', clanLeader: true, featured: false },
-    { name: '@W入~PARKER0755', role: 'Rusher Élite / Flanker', country: 'Togo', flag: '🇹🇬', motto: 'Inarrêtable. Brise chaque ligne de défense avant que l\'ennemi réalise.', kd: '2.47', favWeapon: 'USS9', winRate: '79%', killStreak: '32', featured: true },
-    { name: '@W入~BRAD', role: 'Sniper d\'Élite', country: 'Côte d\'Ivoire', flag: '🇨🇮', motto: 'Un tir, une élimination. Gardien des longues lignes.', kd: '2.10', favWeapon: 'DL Q33', featured: false },
-    { name: '@W入~YAZ', role: 'In-Game Leader (IGL)', country: 'Cameroun', flag: '🇨🇲', motto: 'Le cerveau tactique du clan, maître des rotations.', kd: '1.85', favWeapon: 'LK24', featured: false },
-    { name: '@W入~WAD', role: 'Anchor / Support', country: 'France', flag: '🇫🇷', motto: 'Verrouille les zones et sécurise les spawns tactiques.', kd: '1.75', favWeapon: 'HVK-30', featured: false },
-    { name: '@W入~JAY', role: 'Support / Utility', country: 'Sénégal', flag: '🇸🇳', motto: 'Assure la couverture et la pose de trophées.', kd: '1.65', favWeapon: 'Grau 5.56', featured: false },
-    { name: '@W入~PRUDO', role: 'Flex / Polyvalent', country: 'Bénin', flag: '🇧🇯', motto: 'S\'adapte instantanément aux besoins de l\'escouade.', kd: '1.90', favWeapon: 'DR-H', featured: false },
-    { name: '@W入~DAN', role: 'Rusher Agressif', country: 'France', flag: '🇫🇷', motto: 'Premier sur le point chaud, ne recule jamais.', kd: '2.05', favWeapon: 'Kilo 141', featured: false }
+  const t1Players: Player[] = [
+    { name: '@W入~Undertaker', fullName: 'MYEHOUENOU DILANE', role: 'Chef de Clan / Slayer', country: 'Bénin', flag: '🇧🇯', motto: 'Fondateur et faucheuse des arènes. La loi du clan, c\'est lui.', kd: '2.45', favWeapon: 'Cran d\'arrêt ou Switchblade', clanLeader: true, featured: false },
+    { name: '@W入~Rous_1223', fullName: 'GBEDAN Armand', role: 'Support / Rusher', country: 'Bénin', flag: '🇧🇯', motto: 'Tactique et précision, toujours prêt à soutenir la ligne.', kd: '1.85', favWeapon: 'Cran d\'arrêt', featured: false },
+    { name: '@W入~Cus_Hunt3r', fullName: 'ASSOGBA Marcus', role: 'Anchor / Slayeur', country: 'Bénin', flag: '🇧🇯', motto: 'Maitrise du champ de bataille et du rythme des combats.', kd: '1.95', favWeapon: 'VMP', featured: false },
+    { name: '@W入~Prudoh', fullName: 'HOUEDENOU Prudence', role: 'Flex / Polyvalent', country: 'Bénin', flag: '🇧🇯', motto: 'Polyvalent, il répond à tous les scénarios de match.', kd: '1.90', favWeapon: 'Aucune préférence', featured: false },
+    { name: '@W入~BRAD', fullName: 'AZAÏNON Bradley', role: 'Sniper d\'Élite', country: 'Sénégal', flag: '🇸🇳', motto: 'Un tir, une élimination. Gardien des longues lignes.', kd: '2.10', favWeapon: 'LAG 53', featured: false },
+    { name: '@W入~WAD', fullName: 'WAIDI Abdoul Wadoud', role: 'Anchor / Support', country: 'Nigéria', flag: '🇳🇬', motto: 'Verrouille les zones et sécurise les spawns tactiques.', kd: '1.75', favWeapon: 'VMP Éclosion Toxique', featured: false },
+    { name: '@W入~MK_USER', fullName: 'KANGNIDE Morel', role: 'Flex / Rusher', country: 'Bénin', flag: '🇧🇯', motto: 'S\'adapte instantanément aux besoins de l\'escouade.', kd: '1.90', favWeapon: 'PP Bizon', featured: false },
+    { name: '@W入~YAZ', fullName: 'YAROU Yazid', role: 'In-Game Leader (IGL)', country: 'Bénin', flag: '🇧🇯', motto: 'Le cerveau tactique du clan, maître des rotations.', kd: '1.85', favWeapon: 'QQ9', featured: false },
+    { name: '@W入~BaKs女', fullName: 'BONOU Abraham', role: 'Sniper de Soutien', country: 'Bénin', flag: '🇧🇯', motto: 'Sécurise les zones ouvertes à longue distance.', kd: '1.60', favWeapon: 'Locus', featured: false },
+    { name: '@W入~EML76', fullName: 'GANHE EMILIO', role: 'Slayer', country: 'Béninois / Américain', flag: '🇧🇯', motto: 'Cherche le duel pour briser la défense adverse.', kd: '1.62', favWeapon: 'Chopper', featured: false },
+    { name: '@W入~PARKER0755', fullName: 'ASSIHOU Freddy', role: 'Rusher Élite / Flanker', country: 'Bénin', flag: '🇧🇯', motto: 'Inarrêtable. Brise chaque ligne de défense avant que l\'ennemi réalise.', kd: '2.47', favWeapon: 'USS9 / VMP Éclosion Toxique', winRate: '79%', killStreak: '32', clanLeader: true, featured: true }
   ];
 
   const t2Players = [
@@ -166,6 +184,11 @@ const WarriorsDetails: React.FC<WarriorsDetailsProps> = ({ onClose }) => {
                   <h4 className="font-display text-3xl font-black tracking-wide text-white mb-1 leading-none">
                     {(player as any).name}
                   </h4>
+                  {(player as any).fullName && (
+                    <p className="text-xs text-zinc-400 uppercase tracking-[0.18em] mb-2">
+                      {player.fullName}
+                    </p>
+                  )}
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
                     {(player as any).role}
                   </span>
@@ -235,6 +258,11 @@ const WarriorsDetails: React.FC<WarriorsDetailsProps> = ({ onClose }) => {
                   <h4 className={`font-display text-base font-black tracking-wide ${activeTab === 'T1' ? 'text-white' : 'text-zinc-200'}`}>
                     {(player as any).name}
                   </h4>
+                  {(player as any).fullName && (
+                    <p className="text-[10px] text-zinc-500 uppercase tracking-widest mt-1">
+                      {player.fullName}
+                    </p>
+                  )}
                 </div>
                 <span className="text-xl" title={(player as any).country}>
                   {(player as any).flag}
